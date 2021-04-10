@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row row-md-6">
+        <div class="col" *ngFor="let cat of catList">
+            <app-catitem [cat]="cat.name"></app-catitem>
+        </div>
+    </div>
+</div>

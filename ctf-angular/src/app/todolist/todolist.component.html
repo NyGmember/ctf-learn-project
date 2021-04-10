@@ -1,0 +1,22 @@
+<h2>ToDoList component</h2>
+<br/>
+<div class="card" style="width: 30rem;">
+  <div class="card-body">
+    <h5 class="card-title">To do lists:</h5>
+    <p class="card-text" *ngIf="listCount>0">
+        <span class="todolist" *ngFor="let todo of todolists; let i=index">
+            <i class="pi pi-angle-right"></i>{{ todo }}&nbsp;
+            <button pButton (click)="delList(i)" type="button" label="X" class="p-button-text p-button-danger p-button-sm"></button>
+            <br/>
+        </span>
+    </p>
+  </div>
+  <div class="card-footer">
+    <br/>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="todoText" style="width: 20rem;"> 
+        <label for="float-input">New task</label>
+        <button (click)="newList()" label="Save" icon="pi pi-check" class="p-ripple p-button p-component"><span class="p-button-icon p-button-icon-left pi pi-check" aria-hidden="true"></span><span class="p-button-label">Save</span><span class="p-ink" style="height: 80px; width: 80px; top: -16.125px; left: 102px;"></span></button>
+    </span>
+  </div>
+</div>

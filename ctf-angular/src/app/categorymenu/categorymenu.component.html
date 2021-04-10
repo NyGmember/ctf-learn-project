@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row-md-10 row-sm-12">
+        <div class="card">
+            <div class="card-header">
+                category
+            </div>
+            <div class="card-body">
+                <div class="row row-cols-8">
+                    <div *ngFor="let category of categoryLists" class="col" >
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="https://picsum.photos/100/100?random={{ category }}" style="width: 100px;" class="card-img-top" alt="{{ category }}">
+                                <p class="card-title">{{ category }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
